@@ -9,14 +9,16 @@ export default function ClassHome({showBooking , setClassId, classHome, booking 
             </div>
 
             <div className="row">
-                {classHome.map( list  =>(
+                {classHome.map( list  =>{
+                                <bookings iddd=lst.id/>
+        return (
                     <div onClick={showBooking} setClassId={list.id} className={booking || profile ? "col-lg-3 class_home filter_back" : 'col-lg-3 class_home'} key={list.id}>
                         <sub>{list.category}</sub>
                         <img src={list.filelocation} alt="class images"/>
                         <h6>{list.aim}</h6>
                         <p>₦{list.cost} NGN</p>
                     </div>
-                ))}
+        )})}
                
             </div>
         </div>
